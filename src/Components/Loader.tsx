@@ -33,7 +33,7 @@ export const Loader = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1, ease: "linear" }}
           exit={{ opacity: 0 }}
-          className="h-screen bg-red-500 fixed z-30 inset-0 w-screen overflow-hidden overscroll-none flex justify-center items-center"
+          className="h-screen bg-red-500 fixed z-50 inset-0 w-screen overflow-hidden overscroll-none flex justify-center items-center"
         >
           <motion.svg
             id="color-fill"

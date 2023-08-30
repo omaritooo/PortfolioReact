@@ -8,7 +8,10 @@ const defaultValue = {
 const DarkModeContext = createContext(defaultValue);
 
 const DarkModeProvider = ({ children }: PropsWithChildren) => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const date = new Date();
+  const [darkMode, setDarkMode] = useState<boolean>(
+    date.getHours() > 19 || date.getHours() < 6 ? true : false,
+  );
   const toggleDarkMode: () => undefined = () => {
     setDarkMode(!darkMode);
   };

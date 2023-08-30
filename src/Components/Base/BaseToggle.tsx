@@ -30,7 +30,7 @@ export const BaseToggle = () => {
               aria-labelledby="title"
               aria-describedby="desc"
               role="img"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
             >
               <title>Crescent Moon</title>
               <desc>A color styled icon from Orion Icon Library.</desc>

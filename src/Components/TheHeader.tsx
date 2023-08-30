@@ -6,10 +6,10 @@ import { MenuButton } from "./Base/BaseHamburger";
 import { useMenuScope } from "../Hooks/useMenuScope";
 
 export const TheHeader = () => {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(true);
   const { darkMode } = useContext(DarkModeContext);
   const scope = useMenuScope(!toggle);
-
+  const [display, setDisplay] = useState<string>();
   const headerTags = [
     {
       name: "Home",
@@ -39,75 +39,89 @@ export const TheHeader = () => {
     }
   };
   const variants = {
-    open: { opacity: 1, x: 0, display: "block" },
+    open: {
+      opacity: 1,
+      x: 0,
+      display: display,
+    },
     closed: { opacity: 0, x: "-100%", display: "none" },
   };
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        document.getElementById("header")?.classList.remove("navbar");
-        document.getElementById("header")?.classList.add("navbar-scrolled");
-      } else {
-        document.getElementById("header")?.classList.add("navbar");
-        document.getElementById("header")?.classList.remove("navbar-scrolled");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    if (window.innerWidth < 1024) {
+      setDisplay("block");
+    } else {
+      setDisplay("none");
+      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("h-screen");
+    }
+  }, [window.innerWidth]);
+  useEffect(() => {
+    if (!toggle) {
+      document.body.classList.add("overflow-hidden");
+      document.body.classList.add("h-screen");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("h-screen");
+    }
+  }, [toggle]);
   return (
     <>
-      <header id="header" className=" container">
-        <nav className="w-full container text-black py-4 dark:text-white transition-colors duration-200">
+      {!toggle ? (
+        <div className="bg-[#34a0a4] bg-opacity-90 dark:bg-black z-50 w-screen h-screen fixed top-0 left-0 transition-colors duration-200"></div>
+      ) : null}
+      <header
+        id="header"
+        className={`md:container z-50  fixed  top-0 lg:top-6 bg-[#34a0a4] dark:bg-[#7209b7] ${
+          toggle ? "shadow-xl" : ""
+        }  left-0 right-0  md:rounded-lg`}
+      >
+        <nav className="w-full text-white py-4 container lg:container-0 relative z-50 dark:text-white transition-colors duration-200">
           <div className="flex items-center justify-between w-full mx-auto">
             <div className="flex items-center justify-between w-full h-fit">
-              <div className="flex items-center flex-shrink-0 gap-x-2">
-                <a
-                  href="#"
-                  className="flex items-center text-xl group font-bold text-white"
-                >
-                  <AnimatePresence>
-                    {darkMode ? (
-                      <motion.img
-                        initial={{ x: 300, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        exit={{ x: -300, opacity: 0 }}
-                        src="/logo.png"
-                        width="50"
-                        className="group-hover:rotate-180"
-                        height="50"
-                        alt=""
-                      />
-                    ) : (
-                      <motion.img
-                        initial={{ x: -300, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        exit={{ x: -300, opacity: 0 }}
-                        src="/logo_black.png"
-                        width="50"
-                        className="group-hover:rotate-180"
-                        height="50"
-                        alt=""
-                      />
-                    )}
-                  </AnimatePresence>
-                </a>
+              <div className="flex items-center flex-shrink-0">
+                <AnimatePresence>
+                  {!darkMode ? (
+                    <motion.img
+                      initial={{ x: -300, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      exit={{ x: -300, opacity: 0 }}
+                      whileHover={{
+                        scale: 1.2,
+                        rotate: "180deg",
+                        transition: { duration: 1 },
+                      }}
+                      src="/logo.png"
+                      width="50"
+                      className="hover:rotate-180"
+                      height="50"
+                      alt=""
+                    />
+                  ) : (
+                    <motion.img
+                      initial={{ x: -300, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      whileHover={{
+                        scale: 1.2,
+                        rotate: "180deg",
+                        transition: { duration: 1 },
+                      }}
+                      exit={{ x: -300, opacity: 0 }}
+                      src="/logo_black.png"
+                      width="50"
+                      className="hover:rotate-45"
+                      height="50"
+                      alt=""
+                    />
+                  )}
+                </AnimatePresence>
               </div>
               <div className="hidden h-full align-middle lg:flex md:rtl:mr-10 lg:rtl:mr-14 md:ltr:ml-10 lg:ltr:ml-14">
-                <div className="flex items-center h-full font-light align-middle gap-x-8 md:text-sm lg:text-base">
+                <div className="flex items-center h-full  font-light align-middle gap-x-8 md:text-sm lg:text-sm">
                   {headerTags.map((el, index) => {
                     return (
-                      <a
-                        id={el.link}
-                        href={el.link}
-                        className="nav-link [&>*:first-child]:nav-link-active"
-                        key={index}
-                      >
-                        {el.name}
+                      <a id={el.link} href={el.link} className="" key={index}>
+                        0{index + 1}. {el.name}
                       </a>
                     );
                   })}
@@ -138,21 +152,17 @@ export const TheHeader = () => {
           </div>
           <motion.div
             animate={!toggle ? "open" : "closed"}
+            className="flex   lg:hidden"
             variants={variants}
             id="mobile-menu"
             ref={scope}
           >
-            <ul
-              style={{
-                clipPath: "inset(10% 50% 90% 50% round 10px)",
-              }}
-              className="flex flex-col items-start mt-5 mr-5 text-3xl  text-black  dark:text-white font-light gap-y-1 md:text-lg"
-            >
+            <ul className="flex flex-col items-start mt-5 mr-5 text-3xl h-fit py-4 px-4 rounded-lg dark:bg-gray-800 text-white  dark:text-white font-light gap-y-1 md:text-lg">
               {headerTags.map((el, index) => {
                 return (
                   <li className="my-5 " key={index}>
                     <a id={el.link} href={el.link}>
-                      {el.name}
+                      0{index + 1}. {el.name}
                     </a>
                   </li>
                 );
