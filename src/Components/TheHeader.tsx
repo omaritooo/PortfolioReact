@@ -1,13 +1,13 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BaseToggle } from './Base/BaseToggle';
-import { DarkModeContext } from '../context/darkModeContext';
+import { useDarkMode } from '../context/DarkModeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MenuButton } from './Base/BaseHamburger';
 import { useMenuScope } from '../Hooks/useMenuScope';
 
 export const TheHeader = () => {
   const [toggle, setToggle] = useState<boolean>(true);
-  const { darkMode } = useContext(DarkModeContext);
+  const { darkMode } = useDarkMode();
   const scope = useMenuScope(!toggle);
   const [display, setDisplay] = useState<string>();
   const [scroll, setScroll] = useState<boolean>();
