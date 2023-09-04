@@ -66,7 +66,7 @@ html {
 
 }
 
-#header {
+#nav {
   font-family: 'Firacode' !important;
   font-weight: 400;
   color: red;
@@ -230,86 +230,3 @@ html {
   background: #ff0000;
   right: -20%;
 }
-
-/* 
-.navbar {
-  position: relative;
-  background: transparent;
-  z-index: 100;
-  width: 100vw;
-  margin-top: 70px;
-  padding: 24px 10px;
-  border-radius: 15px;
-  background: transparent;
-  border: 1px solid #EFEFEF;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.box {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.navbar-scrolled {
-  position: fixed;
-  top: 30px;
-  border-radius: 15px;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  width: 100vw;
-  padding: 24px 10px;
-  border-radius: 15px;
-  color: white;
-  border-color: white;
-  box-shadow: 0px 8px 40px 0px #959da533;
-  margin: 0 auto 0;
-  background-color: #020266;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.navbar-scrolled #toggler {
-  color: white
-}
-
-@media only screen and (min-width: 1024px) {
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    width: 100%;
-    margin: 20px auto 0;
-    padding: 24px;
-    background: red;
-    max-height: 130px;
-    border-radius: 15px;
-    box-shadow: 0px 8px 40px 0px #959da533;
-    transition: background-color 0.5s ease-in-out;
-  }
-
-  .navbar-scrolled {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    width: 100vw;
-    padding: 24px;
-    box-shadow: 0px 8px 40px 0px #959da533;
-    margin: 20px auto 0;
-    background-color: #020266;
-    color: white;
-    border-radius: 20px;
-    transition: background-color 0.5s ease-in-out;
-  }
-
-  .navbar-scrolled #login {
-    border-radius: 15px;
-    color: #020266;
-    background-color: white;
-  }
-} */

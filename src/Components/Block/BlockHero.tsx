@@ -18,7 +18,7 @@ export const BlockHero = () => {
   };
   return (
     <section
-      id="navbar"
+      id="header"
       className="my-20 md:my-0 min-h-screen w-screen bg-[#2ec4b6] overflow-hidden dark:bg-[#7b2cbf] relative flex items-center relatve z-40">
       <div className="w-screen h-[200px] md:h-auto z-20 absolute bottom-0 left-0">
         <svg
@@ -52,7 +52,7 @@ export const BlockHero = () => {
             {/* Omar Ashraf */}
             <AnimatePresence>
               <motion.svg
-                className="absolute -bottom-4 left-0 text-green-300 dark:text-[#3c096c]"
+                className="absolute -bottom-4 left-0 text-[#38A3A5] dark:text-[#3c096c]"
                 width="150"
                 initial="hidden"
                 animate="visible"

@@ -1,11 +1,15 @@
+import { BaseTitle } from '../Base/BaseTitle';
+
 export const BlockGetInTouch = () => {
   return (
     <>
       <section
         id="get-in-touch"
         className="container flex flex-col items-center justify-center py-20 gap-y-3">
-        <h1 className="font-firacode text-4xl text-center text-[#7B2CBF]">05. What’s Next?</h1>
-        <h2 className="font-semibold text-center text-white text-7xl font-raleway">Get In Touch</h2>
+        <BaseTitle title="What's next?" index="05" />
+        <h2 className="mt-8 font-semibold text-center text-white text-7xl font-raleway">
+          Get In Touch
+        </h2>
         <p className="text-xl font-raleway text-center text-white font-light lg:max-w-[50%] mt-4">
           Although I’m not currently looking for any new opportunities, my inbox is always open.
           Whether you have a question or just want to say hi, I’ll try my best to get back to you!

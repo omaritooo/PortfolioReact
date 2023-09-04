@@ -14,11 +14,11 @@ export const TheHeader = () => {
   const headerTags = [
     {
       name: 'Home',
-      link: '/'
+      link: '#header'
     },
     {
-      name: 'About me',
-      link: '/'
+      name: 'Tech Stack',
+      link: '#tech-stack'
     },
     {
       name: 'Experience',
@@ -84,10 +84,10 @@ export const TheHeader = () => {
   return (
     <>
       {!toggle ? (
-        <div className="bg-[#34a0a4] bg-opacity-90 dark:bg-black z-50 w-screen h-screen fixed top-0 left-0 transition-colors duration-200"></div>
+        <div className="bg-[#34a0a4] bg-opacity-90 dark:bg-[#7209b7] z-50 w-screen h-screen fixed top-0 left-0 transition-colors duration-200"></div>
       ) : null}
       <header
-        id="header"
+        id="nav"
         className={`${
           scroll
             ? 'md:fixed lg:top-0 transition-all duration-200 ease-in-out'
@@ -159,7 +159,7 @@ export const TheHeader = () => {
                   <MenuButton
                     isOpen={toggle}
                     strokeWidth="2"
-                    color={darkMode ? '#fff' : '#000'}
+                    color={darkMode ? '#000' : '#FFF'}
                     transition={{ ease: 'easeOut', duration: 0.2 }}
                     width="30"
                     height="20"
@@ -174,11 +174,19 @@ export const TheHeader = () => {
             variants={variants}
             id="mobile-menu"
             ref={scope}>
-            <ul className="flex flex-col items-start px-4 py-4 mt-5 mr-5 text-3xl font-light text-white rounded-lg h-fit dark:bg-gray-800 dark:text-white gap-y-1 md:text-lg">
+            <ul className="flex flex-col items-start px-4 py-4 mt-5 mr-5 text-3xl font-light text-white rounded-lg h-fit dark:text-white gap-y-1 md:text-lg">
               {headerTags.map((el, index) => {
                 return (
                   <li className="my-5 " key={index}>
-                    <a id={el.link} href={el.link}>
+                    <a
+                      onClick={() => {
+                        document.body.classList.remove('overflow-hidden');
+                        document.body.classList.remove('h-screen');
+                        setToggle(true);
+                        document.querySelector(`#${el.link}`)?.scrollIntoView();
+                      }}
+                      id={el.link}
+                      href={el.link}>
                       0{index + 1}. {el.name}
                     </a>
                   </li>
