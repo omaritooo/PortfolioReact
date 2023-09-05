@@ -83,7 +83,7 @@ export const TheHeader = () => {
       <header
         id="nav"
         className={`${
-          scrollPosition
+          scroll || scrollPosition
             ? 'md:fixed lg:top-0 transition-all duration-200 ease-in-out'
             : 'md:absolute lg:top-6  transition-all duration-200 ease-in-out'
         } z-50  fixed  top-0  bg-[#34a0a4] container dark:bg-[#7209b7] ${

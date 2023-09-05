@@ -8,7 +8,6 @@ import { BlockExperience } from './Components/Block/BlockExperience';
 import { BlockGetInTouch } from './Components/Block/BlockGetInTouch';
 import { BlockProjects } from './Components/Block/BlockProjects';
 import { BlockTechStack } from './Components/Block/BlockTechStack';
-import { TheBackground } from './Components/TheBackground';
 
 function App() {
   const { darkMode } = useDarkMode();
@@ -25,8 +24,7 @@ function App() {
         <BlockExperience />
         <BlockProjects />
         <BlockGetInTouch />
-
-        {/* <Loader /> */}
+        <Loader />
       </div>
     </DarkModeProvider>
   );

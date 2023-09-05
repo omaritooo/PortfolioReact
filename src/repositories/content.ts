@@ -136,7 +136,6 @@ export const content: Content[] = [
       durationTo: 'November 2022',
       duties: [
         'Worked on creating and maintaining multiple dashboards using both native JS and Vue/Nuxt.js',
-        'Worked on creating and maintaining multiple dashboards using both native JS and Vue/Nuxt.js',
         'Worked on refactoring and re-purposing multiple web applications built specifically for Smart TVs using technologies such as Web-OS and Tizen'
       ]
     }
@@ -165,8 +164,8 @@ export const content: Content[] = [
       jobType: 'Contractor',
       durationTo: 'August 2023',
       duties: [
-        'Worked on creating and maintaining multiple dashboards using both native JS and Vue/Nuxt.js',
-        'Worked on refactoring and re-purposing multiple web applications built specifically for Smart TVs using technologies such as Web-OS and Tizen'
+        "Worked on maintaining and implementing new features on multiple streaming website using the company's CMS ",
+        "Started the developmenet cycle of converting a channel's streaming website to a TV application using webOS"
       ]
     }
   }
