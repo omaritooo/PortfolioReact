@@ -1,23 +1,23 @@
 import './App.css';
 import { TheHeader } from './Components/TheHeader';
 import { Loader } from './Components/Loader';
-import { DarkModeContext, DarkModeProvider } from './context/DarkModeContext';
-import { useContext } from 'react';
+import { useDarkMode, DarkModeProvider } from './context/DarkModeContext';
 import { BlockHyperlinks } from './Components/Block/BlockHyperlinks';
 import { BlockHero } from './Components/Block/BlockHero';
 import { BlockExperience } from './Components/Block/BlockExperience';
 import { BlockGetInTouch } from './Components/Block/BlockGetInTouch';
 import { BlockProjects } from './Components/Block/BlockProjects';
 import { BlockTechStack } from './Components/Block/BlockTechStack';
+import { TheBackground } from './Components/TheBackground';
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
+  const { darkMode } = useDarkMode();
   return (
     <DarkModeProvider>
       <div
         className={`relative ${
           darkMode ? 'dark' : ''
-        } bg-white dark:bg-[#3c096c] transition-colors duration-200 ease-in-out `}>
+        } bg-transparent dark:bg-dark-primary transition-colors duration-200 ease-in-out `}>
         <TheHeader />
         <BlockHyperlinks />
         <BlockHero />
@@ -25,7 +25,8 @@ function App() {
         <BlockExperience />
         <BlockProjects />
         <BlockGetInTouch />
-        <Loader />
+
+        {/* <Loader /> */}
       </div>
     </DarkModeProvider>
   );

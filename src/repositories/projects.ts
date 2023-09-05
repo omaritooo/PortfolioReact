@@ -12,58 +12,25 @@ export interface IProject {
 
 export const Projects: IProject[] = [
   {
-    name: "Bayn",
+    name: 'Bayn',
     description:
-      "On Bayn, I worked as the sole frontend developer working on creating a responsive, snappy website while also delivering a pixel perfect design. ",
-    stack: ["Nuxt", "Tailwind", "Vuex", "AOS"],
+      'On Bayn, I worked as the sole frontend developer working on creating a responsive, snappy website while also delivering a pixel perfect design. ',
+    stack: ['Nuxt', 'Tailwind', 'Vuex', 'AOS'],
     links: {
       github: null,
-      live: "https://bayn.io/",
+      live: 'https://bayn.io/'
     },
-    thumbnail: "/Bayn.jpeg",
+    thumbnail: '/Bayn.jpeg'
   },
   {
-    name: "Bayn",
+    name: 'Active Code',
     description:
-      "On Bayn, I worked as the sole frontend developer working on creating a responsive, snappy website while also delivering a pixel perfect design. ",
-    stack: ["Nuxt", "Tailwind", "Vuex", "AOS"],
+      'Active Code is an application in charge of handling interactions between sellers, resellers and admins, each with their own UI and priviliges. I worked a frontend developer working on maintaining the legacy code, adding new features and refactoring sections in the web application',
+    stack: ['Nuxt', 'Vuex', 'Vuetify', 'Laravel'],
     links: {
       github: null,
-      live: "https://bayn.io/",
+      live: 'https://drive.google.com/file/d/1KbysKwMH9NwA-bFa6mxQUsySPi6ikADi/view'
     },
-    thumbnail: "/Bayn.jpeg",
-  },
-  {
-    name: "Bayn",
-    description:
-      "On Bayn, I worked as the sole frontend developer working on creating a responsive, snappy website while also delivering a pixel perfect design. ",
-    stack: ["Nuxt", "Tailwind", "Vuex", "AOS"],
-    links: {
-      github: null,
-      live: "https://bayn.io/",
-    },
-    thumbnail: "/Bayn.jpeg",
-  },
-  {
-    name: "Bayn",
-    description:
-      "On Bayn, I worked as the sole frontend developer working on creating a responsive, snappy website while also delivering a pixel perfect design. ",
-    stack: ["Nuxt", "Tailwind", "Vuex", "AOS"],
-    links: {
-      github: null,
-      live: "https://bayn.io/",
-    },
-    thumbnail: "/Bayn.jpeg",
-  },
-  {
-    name: "Bayn",
-    description:
-      "On Bayn, I worked as the sole frontend developer working on creating a responsive, snappy website while also delivering a pixel perfect design. ",
-    stack: ["Nuxt", "Tailwind", "Vuex", "AOS"],
-    links: {
-      github: null,
-      live: "https://bayn.io/",
-    },
-    thumbnail: "/Bayn.jpeg",
-  },
+    thumbnail: '/activecode.jpeg'
+  }
 ];

@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion';
 
-const AnimatedTextCharacter = ({ text, delay = 1 }: { text: string; delay?: number }) => {
+const AnimatedTextCharacter = ({
+  text,
+  delay = 1,
+  onScroll = false
+}: {
+  text: string;
+  delay?: number;
+  onScroll?: boolean;
+}) => {
   // splitting text into letters
   const letters = Array.from(text);
 
@@ -38,18 +46,36 @@ const AnimatedTextCharacter = ({ text, delay = 1 }: { text: string; delay?: numb
   };
 
   return (
-    <motion.div
-      style={{ overflow: 'hidden', display: 'flex' }}
-      className="flex flex-wrap whitespace-nowrap"
-      variants={container}
-      initial="hidden"
-      animate="visible">
-      {letters.map((letter, index) => (
-        <motion.span variants={child} key={index}>
-          {letter === ' ' ? '\u00A0' : letter}
-        </motion.span>
-      ))}
-    </motion.div>
+    <>
+      {onScroll ? (
+        <motion.div
+          style={{ overflow: 'hidden', display: 'flex' }}
+          className="flex flex-wrap pb-2"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.9 }}>
+          {letters.map((letter, index) => (
+            <motion.span variants={child} key={index}>
+              {letter === ' ' ? '\u00A0' : letter}
+            </motion.span>
+          ))}
+        </motion.div>
+      ) : (
+        <motion.div
+          style={{ overflow: 'hidden', display: 'flex' }}
+          className="flex flex-wrap pb-2"
+          variants={container}
+          initial="hidden"
+          animate="visible">
+          {letters.map((letter, index) => (
+            <motion.span variants={child} key={index}>
+              {letter === ' ' ? '\u00A0' : letter}
+            </motion.span>
+          ))}
+        </motion.div>
+      )}
+    </>
   );
 };
 

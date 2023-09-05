@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { useAnimate, stagger } from "framer-motion";
+import { useEffect } from 'react';
+import { useAnimate, stagger } from 'framer-motion';
 
 const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
@@ -8,32 +8,30 @@ export function useMenuScope(isOpen: boolean) {
 
   useEffect(() => {
     animate(
-      "ul",
+      'ul',
       {
-        clipPath: isOpen
-          ? "inset(0% 0% 0% 0% round 10px)"
-          : "inset(10% 50% 90% 50% round 10px)",
-        display: isOpen ? "block" : "none",
+        clipPath: isOpen ? 'inset(0% 0% 0% 0% round 10px)' : 'inset(10% 50% 90% 50% round 10px)',
+        display: isOpen ? 'block' : 'none'
       },
       {
-        type: "spring",
+        type: 'spring',
         bounce: 0,
-        duration: 0.5,
-      },
+        duration: 0.5
+      }
     );
 
     animate(
-      "li",
+      'li',
       isOpen
         ? {
             opacity: 1,
-            scale: 1,
+            scale: 1
           }
         : { opacity: 1, scale: 1 },
       {
         duration: 0.2,
-        delay: isOpen ? staggerMenuItems : 0,
-      },
+        delay: isOpen ? staggerMenuItems : 0
+      }
     );
   }, [isOpen]);
 

@@ -4,6 +4,7 @@ import { useDarkMode } from '../context/DarkModeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MenuButton } from './Base/BaseHamburger';
 import { useMenuScope } from '../Hooks/useMenuScope';
+import { usePageScroll } from '../Hooks/usePageScroll';
 
 export const TheHeader = () => {
   const [toggle, setToggle] = useState<boolean>(true);
@@ -11,6 +12,7 @@ export const TheHeader = () => {
   const scope = useMenuScope(!toggle);
   const [display, setDisplay] = useState<string>();
   const [scroll, setScroll] = useState<boolean>();
+  const { scrollPosition } = usePageScroll();
   const headerTags = [
     {
       name: 'Home',
@@ -34,21 +36,13 @@ export const TheHeader = () => {
     }
   ];
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
+  useEffect(() => {
     if (scrollPosition > 50) {
       setScroll(true);
     } else {
       setScroll(false);
     }
-  };
-  useEffect(() => {
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  }, [scrollPosition]);
   const toggleNavbar = () => {
     if (window.innerWidth < 1024) {
       setToggle(!toggle);
@@ -89,7 +83,7 @@ export const TheHeader = () => {
       <header
         id="nav"
         className={`${
-          scroll
+          scrollPosition
             ? 'md:fixed lg:top-0 transition-all duration-200 ease-in-out'
             : 'md:absolute lg:top-6  transition-all duration-200 ease-in-out'
         } z-50  fixed  top-0  bg-[#34a0a4] container dark:bg-[#7209b7] ${
