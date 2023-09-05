@@ -27,6 +27,7 @@ export const BaseProject = ({ toggle, content }: { toggle?: boolean; content: IP
           <div className="flex items-center gap-x-4 max-h-max">
             {content.links.github ? (
               <a
+                title={content.links.github as string}
                 href={content.links.github as string}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -36,6 +37,7 @@ export const BaseProject = ({ toggle, content }: { toggle?: boolean; content: IP
             ) : null}
             {content.links.live ? (
               <a
+                title={content.links.github as string}
                 href={content.links.live as string}
                 target="_blank"
                 rel="noopener noreferrer"
