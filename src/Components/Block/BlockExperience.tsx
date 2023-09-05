@@ -35,7 +35,7 @@ const Tab = ({
       className={`${
         activeItem === content.id
           ? 'text-white dark:text-red-300  border-light-primary dark:border-dark-offset bg-light-main dark:bg-dark-main'
-          : 'border-light-main dark:border-gray-400 text-light-main dark:text-white hover:text-light-primary dark:hover:text-dark-main'
+          : 'border-light-main dark:border-dark-main text-light-main dark:text-white hover:text-light-primary dark:hover:text-dark-main'
       }  py-2 px-4 md:px-5 md:py-3 font-firacode w-full text-sm md:w-full border-b-[2px] flex md:border-l-[2px] md:border-b-0 md:rounded-r-lg cursor-pointer  dark:active:bg-dark-main md:ml-1 transition duration-200 ease-in-out`}>
       0{content.id + 1}.{'  '} {content.title}
     </li>
