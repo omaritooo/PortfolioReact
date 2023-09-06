@@ -85,7 +85,7 @@ export const BlockExperience = () => {
       <div className="container flex flex-col justify-center gap-y-10">
         <BaseTitle title="My Experience" index="03" />
         <div className="flex flex-col justify-center w-full gap-y-5 md:flex-row max-w-screen gap-x-8">
-          <ul className="flex flex-row w-full overflow-x-scroll md:max-w-max no-scrollbar md:gap-x-6 md:flex-col">
+          <ul className="flex flex-row w-full overflow-x-scroll md:overflow-x-hidden md:max-w-max no-scrollbar md:gap-x-6 md:flex-col">
             {content.map((el: Content) => {
               return (
                 <Tab
