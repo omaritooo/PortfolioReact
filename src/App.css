@@ -58,7 +58,9 @@
   font-weight: 700;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Raleway';
