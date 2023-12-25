@@ -35,7 +35,8 @@ export const Projects: IProject[] = [
   },
   {
     name: 'Trackmate',
-    description: 'Trackmate is a freelancing project ',
+    description:
+      'Trackmate is a freelancing project for a saudi client built using Tailwind and vanilla typescript. It follows a strict UI design with an intrice set of custom tailor-made animations. ',
     stack: ['Typescript', 'Tailwind', 'GSAP'],
     links: {
       github: null,
