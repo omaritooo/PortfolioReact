@@ -18,7 +18,7 @@ export const Projects: IProject[] = [
     stack: ['Nuxt', 'Tailwind', 'Vuex', 'AOS'],
     links: {
       github: null,
-      live: 'https://bayn.io/'
+      live: 'https://bayn-landing.netlify.app/'
     },
     thumbnail: '/Bayn.jpeg'
   },
@@ -32,5 +32,15 @@ export const Projects: IProject[] = [
       live: 'https://drive.google.com/file/d/1KbysKwMH9NwA-bFa6mxQUsySPi6ikADi/view'
     },
     thumbnail: '/activecode.jpeg'
+  },
+  {
+    name: 'Trackmate',
+    description: 'Trackmate is a freelancing project ',
+    stack: ['Typescript', 'Tailwind', 'GSAP'],
+    links: {
+      github: null,
+      live: 'https://trackmate-landing.netlify.app/'
+    },
+    thumbnail: '/trackmate.jpeg'
   }
 ];

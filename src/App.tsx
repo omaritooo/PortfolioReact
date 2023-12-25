@@ -16,7 +16,7 @@ function App() {
       <div
         className={`relative ${
           darkMode ? 'dark' : ''
-        } bg-transparent dark:bg-dark-primary transition-colors duration-200 ease-in-out `}>
+        } bg-transparent overflow-x-hidden dark:bg-dark-primary transition-colors duration-200 ease-in-out `}>
         <TheHeader />
         <BlockHyperlinks />
         <BlockHero />
