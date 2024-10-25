@@ -104,11 +104,11 @@ export const content: Content[] = [
     body: {
       jobTitle: 'Front End Developer',
       jobType: 'Full time',
-      durationFrom: 'October 2021',
+      durationFrom: 'August 2021',
       durationTo: 'May 2022',
       duties: [
-        'Worked alongside UI/UX designers to create pixel-perfect responsive web applications.',
-        'Also worked alongside Backend developers to create non static websites for optimal user experience while also working with technologies such as Three.js'
+        'Collaborated closely with UI/UX designers to create seamless, responsive web applications, achieving a 30% increase in performance across all display devices. This partnership enhanced user experience and promoted more engaging interactions.',
+        'Led the front-end development cycle in parallel with backend developers to deliver websites that prioritize optimal user experience and performance. Implemented technologies like Three.js, resulting in 50% more interactivity and creating immersive web experiences.'
       ]
     }
   },
@@ -133,10 +133,10 @@ export const content: Content[] = [
       jobTitle: 'Front End Developer',
       durationFrom: 'May 2021',
       jobType: 'Full time',
-      durationTo: 'November 2022',
+      durationTo: 'January 2023',
       duties: [
-        'Worked on creating and maintaining multiple dashboards using both native JS and Vue/Nuxt.js',
-        'Worked on refactoring and re-purposing multiple web applications built specifically for Smart TVs using technologies such as Web-OS and Tizen'
+        'Maintained a critical dashboard, achieving a 50% reduction in user errors and providing a safer, smoother user experience. Implemented new cutting-edge features and scaled the system to accommodate a larger, more diverse user base.',
+        'Revitalized legacy WebOS/Tizen projects as a Front End Developer, integrating new functionality and migrating applications to modern technologies. Reduced the potential for user error by 50% while optimizing performance metrics, achieving an exponential improvement in application eﬀiciency.'
       ]
     }
   },
@@ -160,12 +160,27 @@ export const content: Content[] = [
     title: 'Whitepeaks',
     body: {
       jobTitle: 'Front End Developer',
-      durationFrom: 'April 2023',
-      jobType: 'Contractor',
+      durationFrom: 'February 2023',
+      jobType: 'Full time',
       durationTo: 'August 2023',
       duties: [
-        "Worked on maintaining and implementing new features on multiple streaming website using the company's CMS ",
-        "Started the developmenet cycle of converting a channel's streaming website to a TV application using webOS"
+        'Revitalized the flagship streaming web application by implementing cutting-edge features and resolving critical bugs, resulting in a 40% increase in user satisfaction and a 30% boost in overall application performance.',
+        'Spearheaded the cross-functional optimization of the flagship web application, transforming it into a high performance TV application for WebOS. Delivered a 50% performance enhancement, driving increased user engagement and satisfaction metrics by 25%.'
+      ]
+    }
+  },
+  {
+    id: 5,
+    title: 'pyraCode GmbH',
+    body: {
+      jobTitle: 'Mid Level Front End Developer',
+      durationFrom: 'January 2024',
+      jobType: 'Full time',
+      durationTo: 'Present',
+      duties: [
+        'Led the migration of a Nuxt.js 2 monolithic application to Nuxt.js 3 with full TypeScript integration, leveraging new features and performance optimizations to enhance scalability, resulting in a 25% increase in application performance. Replaced deprecated packages, achieving a 30% improvement in security and reducing maintenance overhead.',
+        'Reviewed Pull Requests (PRs) thoroughly, providing constructive feedback that improved code quality, ensured best practices, and maintained consistency. Streamlined integrations, resulting in 50% fewer integration issues and a 20% reduction in bug incidents.',
+        'Collaborated with a cross-functional team to deliver a key, time-sensitive feature two weeks ahead of schedule, effectively coordinating with design, development, and QA teams to ensure timely, high quality delivery, meeting 100% of project deadlines and client expectations.'
       ]
     }
   }

@@ -81,7 +81,7 @@ export const BlockExperience = () => {
   return (
     <section
       id="experience"
-      className="flex flex-col items-center justify-center py-32 text-white bg-transparent">
+      className="flex flex-col items-center justify-center py-20 text-white bg-transparent">
       <div className="container flex flex-col justify-center gap-y-10">
         <BaseTitle title="My Experience" index="03" />
         <div className="flex flex-col justify-center w-full gap-y-5 md:flex-row max-w-screen gap-x-8">

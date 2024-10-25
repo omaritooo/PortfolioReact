@@ -32,16 +32,5 @@ export const Projects: IProject[] = [
       live: 'https://drive.google.com/file/d/1KbysKwMH9NwA-bFa6mxQUsySPi6ikADi/view'
     },
     thumbnail: '/activecode.jpeg'
-  },
-  {
-    name: 'Trackmate',
-    description:
-      'Trackmate is a freelancing project for a saudi client built using Tailwind and vanilla typescript. It follows a strict UI design with an intrice set of custom tailor-made animations. ',
-    stack: ['Typescript', 'Tailwind', 'GSAP'],
-    links: {
-      github: null,
-      live: 'https://trackmate-landing.netlify.app/'
-    },
-    thumbnail: '/trackmate.jpeg'
   }
 ];
